@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Richa, Ujjain | Premium Comfort Stay Near Mahakaleshwar Temple</title>
+<meta name="description" content="Hotel Richa, Ujjain - A comfortable, family-friendly hotel on Sanwer Road offering well-maintained AC rooms, free WiFi, and personalized service. Near Mahakaleshwar Jyotirlinga Temple. Book direct via call or WhatsApp.">
+<meta name="keywords" content="Hotel Richa Ujjain, hotels near Mahakaleshwar Temple, Sanwer Road hotel, Ujjain family hotel, budget hotel Ujjain">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Hotel Richa",
+  "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mahesh Vihar, 03 Colony, Sanwer Road",
+    "addressLocality": "Ujjain",
+    "addressRegion": "Madhya Pradesh",
+    "postalCode": "456010",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-9425134968",
+  "priceRange": "₹2500 - ₹4000",
+  "checkinTime": "10:00",
+  "checkoutTime": "09:00",
+  "amenityFeature": [
+    {"@type":"LocationFeatureSpecification","name":"Free WiFi","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Parking","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Air Conditioning","value":true}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --maroon:#7A1F1F;
+    --maroon-dark:#5c1616;
+    --gold:#D4AF37;
+    --gold-light:#f0d68a;
+    --beige:#FBF7F0;
+    --cream:#FFF9F0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins',sans-serif;
+    background:var(--beige);
+    color:#2b2320;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.font-heading{
+    font-family:'Playfair Display',serif;
+  }
+  ::selection{background:var(--gold);color:#fff;}
+
+  /* Scrollbar */
+  ::-webkit-scrollbar{width:8px;}
+  ::-webkit-scrollbar-track{background:var(--beige);}
+  ::-webkit-scrollbar-thumb{background:var(--maroon);border-radius:4px;}
+
+  /* Loading Screen */
+  #loader{
+    position:fixed;inset:0;z-index:9999;
+    background:linear-gradient(135deg,var(--maroon),var(--maroon-dark));
+    display:flex;align-items:center;justify-content:center;flex-direction:column;
+    transition:opacity .8s ease, visibility .8s ease;
+  }
+  #loader.hide{opacity:0;visibility:hidden;}
+  .loader-logo{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(2rem,6vw,3.5rem);
+    color:#fff;letter-spacing:2px;
+    position:relative;
+    animation:pulseLogo 1.8s ease-in-out infinite;
+  }
+  .loader-logo span{color:var(--gold);}
+  @keyframes pulseLogo{
+    0%,100%{transform:scale(1);opacity:1;}
+    50%{transform:scale(1.06);opacity:.75;}
+  }
+  .loader-line{
+    width:120px;height:2px;background:rgba(255,255,255,.2);
+    margin-top:20px;position:relative;overflow:hidden;border-radius:2px;
+  }
+  .loader-line::after{
+    content:'';position:absolute;left:-40%;top:0;bottom:0;width:40%;
+    background:var(--gold);animation:loadBar 1.2s ease-in-out infinite;
+  }
+  @keyframes loadBar{
+    0%{left:-40%;}
+    100%{left:100%;}
+  }
+
+  /* Nav */
+  #navbar{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    transition:all .4s ease;
+    background:rgba(255,255,255,0.0);
+    padding:18px 0;
+  }
+  #navbar.scrolled{
+    background:rgba(255,255,255,0.96);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 25px rgba(0,0,0,.08);
+    padding:10px 0;
+  }
+  .logo-text{
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    font-size:1.6rem;
+    letter-spacing:1px;
+  }
+  .logo-text .accent{color:var(--gold);}
+  #navbar.scrolled .nav-link, #navbar.scrolled .logo-text{color:var(--maroon);}
+  .nav-link{
+    position:relative;color:#fff;font-weight:500;font-size:.92rem;letter-spacing:.3px;
+    transition:color .3s;
+  }
+  .nav-link::after{
+    content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--gold);
+    transition:width .3s ease;
+  }
+  .nav-link:hover::after{width:100%;}
+  .nav-link:hover{color:var(--gold);}
+
+  .btn-gold{
+    background:linear-gradient(135deg,var(--gold),#c99b1f);
+    color:#3a2b04;font-weight:600;
+    padding:12px 28px;border-radius:50px;
+    transition:transform .3s, box-shadow .3s;
+    box-shadow:0 8px 20px rgba(212,175,55,.35);
+    position:relative;overflow:hidden;
+  }
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(212,175,55,.5);}
+  .btn-outline{
+    border:2px solid #fff;color:#fff;font-weight:500;
+    padding:11px 26px;border-radius:50px;transition:all .3s;
+    position:relative;overflow:hidden;
+  }
+  .btn-outline:hover{background:#fff;color:var(--maroon);}
+  .btn-maroon{
+    background:var(--maroon);color:#fff;font-weight:600;
+    padding:12px 28px;border-radius:50px;transition:all .3s;
+    box-shadow:0 8px 20px rgba(122,31,31,.35);
+    position:relative;overflow:hidden;
+  }
+  .btn-maroon:hover{background:var(--maroon-dark);transform:translateY(-3px);}
+
+  /* Ripple */
+  .ripple{position:relative;overflow:hidden;}
+  .ripple-effect{
+    position:absolute;border-radius:50%;
+    background:rgba(255,255,255,.5);
+    transform:scale(0);
+    animation:rippleAnim .6s linear;
+    pointer-events:none;
+  }
+  @keyframes rippleAnim{
+    to{transform:scale(4);opacity:0;}
+  }
+
+  /* Hero */
+  #hero{
+    position:relative;height:100vh;min-height:600px;overflow:hidden;
+  }
+  .hero-slide{
+    position:absolute;inset:0;background-size:cover;background-position:center;
+    opacity:0;transition:opacity 1.6s ease-in-out;
+    transform:scale(1.08);
+  }
+  .hero-slide.active{opacity:1;animation:slowZoom 8s ease-in-out forwards;}
+  @keyframes slowZoom{
+    from{transform:scale(1.08);}
+    to{transform:scale(1);}
+  }
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(30,10,10,.55) 0%,rgba(30,10,10,.45) 40%,rgba(20,8,8,.8) 100%);
+  }
+  #particles{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+  .particle{
+    position:absolute;bottom:-10px;background:rgba(212,175,55,.6);
+    border-radius:50%;
+    animation:floatUp linear infinite;
+  }
+  @keyframes floatUp{
+    0%{transform:translateY(0) translateX(0);opacity:0;}
+    10%{opacity:1;}
+    100%{transform:translateY(-110vh) translateX(20px);opacity:0;}
+  }
+  .hero-content{position:relative;z-index:10;}
+  .hero-tag{
+    display:inline-block;padding:8px 20px;border:1px solid var(--gold);
+    border-radius:50px;color:var(--gold-light);font-size:.85rem;letter-spacing:2px;
+    text-transform:uppercase;
+  }
+
+  /* Reveal animation */
+  .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+  .reveal-scale{opacity:0;transform:scale(.9);transition:opacity .8s ease, transform .8s ease;}
+  .reveal-scale.visible{opacity:1;transform:scale(1);}
+
+  .section-tag{
+    color:var(--maroon);font-weight:600;letter-spacing:3px;text-transform:uppercase;font-size:.8rem;
+  }
+  .section-tag::before{content:'—— ';color:var(--gold);}
+
+  /* Room Cards */
+  .room-card{
+    background:#fff;border-radius:20px;overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:transform .45s ease, box-shadow .45s ease;
+  }
+  .room-card:hover{transform:translateY(-12px);box-shadow:0 25px 55px rgba(122,31,31,.18);}
+  .room-img-wrap{overflow:hidden;height:260px;}
+  .room-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+  .room-card:hover .room-img-wrap img{transform:scale(1.12);}
+  .price-badge{
+    background:var(--maroon);color:#fff;padding:6px 16px;border-radius:50px;font-weight:600;font-size:.9rem;
+  }
+
+  /* Amenity Card */
+  .amenity-card{
+    background:#fff;border-radius:16px;padding:28px 18px;text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    transition:transform .4s ease, background .4s ease;
+  }
+  .amenity-card:hover{transform:translateY(-8px);background:var(--maroon);color:#fff;}
+  .amenity-card:hover .amenity-icon{color:var(--gold);}
+  .amenity-icon{font-size:2.2rem;color:var(--maroon);transition:color .4s ease;}
+  .amenity-card:hover .amenity-icon{color:var(--gold-light);}
+
+  /* Gallery */
+  .gallery-grid{
+    columns: 4 220px;column-gap:14px;
+  }
+  @media(max-width:768px){.gallery-grid{columns:2 160px;}}
+  .gallery-item{
+    break-inside:avoid;margin-bottom:14px;border-radius:14px;overflow:hidden;cursor:pointer;
+    position:relative;box-shadow:0 8px 20px rgba(0,0,0,.1);
+  }
+  .gallery-item img{width:100%;display:block;transition:transform .5s ease;}
+  .gallery-item:hover img{transform:scale(1.15);}
+  .gallery-item::after{
+    content:'\002B';color:#fff;font-size:2rem;position:absolute;inset:0;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(122,31,31,.0);opacity:0;transition:all .35s ease;
+  }
+  .gallery-item:hover::after{opacity:1;background:rgba(122,31,31,.45);}
+
+  /* Lightbox */
+  #lightbox{
+    position:fixed;inset:0;background:rgba(10,5,5,.94);z-index:2000;
+    display:none;align-items:center;justify-content:center;flex-direction:column;
+  }
+  #lightbox.active{display:flex;}
+  #lightbox img{max-width:90vw;max-height:80vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+  .lb-close, .lb-nav{
+    color:#fff;cursor:pointer;transition:color .3s;
+  }
+  .lb-close:hover, .lb-nav:hover{color:var(--gold);}
+
+  /* Attraction Cards */
+  .attraction-card{
+    background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:transform .4s ease;
+  }
+  .attraction-card:hover{transform:translateY(-8px);}
+  .distance-badge{
+    background:var(--gold);color:#3a2b04;font-weight:600;padding:4px 14px;border-radius:50px;font-size:.8rem;
+  }
+
+  /* Testimonials */
+  .testimonial-card{
+    background:#fff;border-radius:20px;padding:40px;box-shadow:0 15px 40px rgba(0,0,0,.08);
+    max-width:700px;margin:0 auto;text-align:center;
+  }
+  .stars{color:var(--gold);letter-spacing:3px;}
+  .dot{
+    width:10px;height:10px;border-radius:50%;background:#ddd;cursor:pointer;transition:all .3s;
+  }
+  .dot.active{background:var(--maroon);width:26px;border-radius:6px;}
+
+  /* Counter */
+  .counter-num{
+    font-family:'Playfair Display',serif;font-weight:700;font-size:3rem;color:var(--gold-light);
+  }
+
+  /* Floating buttons */
+  #whatsapp-float{
+    position:fixed;bottom:26px;right:22px;z-index:900;
+    background:#25D366;width:60px;height:60px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 25px rgba(37,211,102,.5);
+    animation:wa-pulse 2.2s infinite;
+  }
+  @keyframes wa-pulse{
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,.6);}
+    70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+  }
+  #sticky-book{
+    position:fixed;bottom:0;left:0;right:0;z-index:899;
+    background:linear-gradient(90deg,var(--maroon),var(--maroon-dark));
+    display:flex;justify-content:space-between;align-items:center;
+    padding:12px 20px;box-shadow:0 -4px 20px rgba(0,0,0,.2);
+  }
+  @media(min-width:1024px){#sticky-book{display:none;}}
+
+  .glass{
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.5);
+  }
+
+  input,textarea{
+    background:#fff;border:1px solid #e5ddd0;
+  }
+  input:focus,textarea:focus{outline:none;border-color:var(--gold);}
+
+  .divider-gold{
+    width:70px;height:3px;background:var(--gold);margin:14px auto;border-radius:3px;
+  }
+
+  .mobile-menu{
+    transition:max-height .4s ease, opacity .3s ease;
+    max-height:0;overflow:hidden;opacity:0;
+  }
+  .mobile-menu.open{max-height:500px;opacity:1;}
+
+  .fade-slide-enter{animation:fadeSlideIn .8s ease both;}
+  @keyframes fadeSlideIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+</style>
+  <script type="module" crossorigin src="/assets/index-CjvbsYXq.js"></script>
+</head>
+<body class="bg-[#FBF7F0]">
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-logo">Hotel <span>Richa</span></div>
+  <div class="loader-line"></div>
+</div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="max-w-7xl mx-auto px-5 flex items-center justify-between">
+    <a href="#home" class="logo-text text-white">Hotel <span class="accent">Richa</span></a>
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#rooms" class="nav-link">Rooms</a>
+      <a href="#amenities" class="nav-link">Amenities</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#nearby" class="nav-link">Nearby</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <a href="#book" class="hidden lg:inline-block btn-gold ripple">Book Now</a>
+    <button id="menuBtn" class="lg:hidden text-white text-3xl">&#9776;</button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu lg:hidden px-5">
+    <div class="flex flex-col gap-4 py-4 bg-white rounded-xl mt-3 shadow-xl px-5">
+      <a href="#home" class="text-[#7A1F1F] font-medium">Home</a>
+      <a href="#about" class="text-[#7A1F1F] font-medium">About</a>
+      <a href="#rooms" class="text-[#7A1F1F] font-medium">Rooms</a>
+      <a href="#amenities" class="text-[#7A1F1F] font-medium">Amenities</a>
+      <a href="#gallery" class="text-[#7A1F1F] font-medium">Gallery</a>
+      <a href="#nearby" class="text-[#7A1F1F] font-medium">Nearby</a>
+      <a href="#reviews" class="text-[#7A1F1F] font-medium">Reviews</a>
+      <a href="#contact" class="text-[#7A1F1F] font-medium">Contact</a>
+      <a href="#book" class="btn-gold text-center">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div id="hero">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="hero-overlay"></div>
+    <div id="particles"></div>
+
+    <div class="hero-content h-full flex flex-col items-center justify-center text-center px-5">
+      <span class="hero-tag fade-slide-enter">Welcome to Ujjain</span>
+      <h1 class="fade-slide-enter text-white font-heading font-bold mt-6" style="font-size:clamp(2rem,5.5vw,4.2rem);line-height:1.15;max-width:900px;">
+        Experience Comfort and Hospitality in the Heart of Ujjain
+      </h1>
+      <p class="fade-slide-enter text-white/85 mt-5 max-w-2xl text-base md:text-lg">
+        A warm, family-friendly stay near Mahakaleshwar Jyotirlinga — where tradition meets modern comfort.
+      </p>
+      <div class="fade-slide-enter flex flex-wrap gap-4 justify-center mt-9">
+        <a href="#book" class="btn-gold ripple">Book Now</a>
+        <a href="tel:+919425134968" class="btn-outline ripple">📞 Call Now</a>
+        <a href="https://wa.me/919425134968" target="_blank" class="btn-outline ripple" style="border-color:#25D366;color:#25D366;">🟢 WhatsApp Booking</a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2" id="heroDots"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="bg-[#7A1F1F] py-16">
+  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center px-5">
+    <div class="reveal">
+      <div class="counter-num" data-target="2" data-suffix="+">0</div>
+      <p class="text-white/80 mt-2 tracking-wide">Years of Service</p>
+    </div>
+    <div class="reveal">
+      <div class="counter-num" data-target="7">0</div>
+      <p class="text-white/80 mt-2 tracking-wide">Comfort Rooms</p>
+    </div>
+    <div class="reveal">
+      <div class="counter-num" data-target="8000">0</div>
+      <p class="text-white/80 mt-2 tracking-wide">Happy Guests</p>
+    </div>
+    <div class="reveal">
+      <div class="counter-num" data-target="4.6">0</div>
+      <p class="text-white/80 mt-2 tracking-wide">Average Rating</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 max-w-7xl mx-auto px-5">
+  <div class="grid md:grid-cols-2 gap-14 items-center">
+    <div class="reveal relative">
+      <img src="double-bed.jpg" class="rounded-3xl shadow-2xl w-full h-[460px] object-cover" loading="lazy" alt="Hotel Richa double bed room">
+      <div class="absolute -bottom-8 -right-6 glass rounded-2xl p-6 shadow-xl hidden md:block">
+        <p class="font-heading text-3xl font-bold text-[#7A1F1F]">10:00 AM</p>
+        <p class="text-sm text-gray-600">Check-in Time</p>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="section-tag">About Hotel Richa</span>
+      <h2 class="font-heading font-bold text-4xl mt-3 text-[#2b2320] leading-tight">A Home Away From Home in the Holy City</h2>
+      <div class="divider-gold ml-0"></div>
+      <p class="text-gray-600 leading-relaxed mt-5">
+        Hotel Richa is a comfortable and family-friendly hotel in Ujjain, offering a perfect blend of hospitality, convenience, and modern amenities. Located on Sanwer Road with easy access to the city's major attractions, the hotel provides well-maintained rooms, delicious food, and personalized service for pilgrims, tourists, families, and business travelers.
+      </p>
+      <p class="text-gray-600 leading-relaxed mt-4">
+        Whether you are visiting Ujjain for spiritual purposes or a relaxing stay, Hotel Richa ensures a pleasant and memorable experience.
+      </p>
+      <div class="grid grid-cols-2 gap-5 mt-8">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-[#7A1F1F]/10 flex items-center justify-center text-[#7A1F1F] font-bold">✓</div>
+          <span class="text-sm font-medium">Check-in: 10:00 AM</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-[#7A1F1F]/10 flex items-center justify-center text-[#7A1F1F] font-bold">✓</div>
+          <span class="text-sm font-medium">Check-out: 9:00 AM</span>
+        </div>
+      </div>
+      <a href="#book" class="btn-maroon ripple inline-block mt-8">Reserve Your Stay</a>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center reveal mb-16">
+      <span class="section-tag">Our Rooms</span>
+      <h2 class="font-heading font-bold text-4xl mt-3">Rooms Designed for Every Guest</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10">
+      <!-- Double Bed -->
+      <div class="room-card reveal">
+        <div class="room-img-wrap">
+          <img src="double-bed.jpg" alt="Double Bed Room" loading="lazy">
+        </div>
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-3">
+            <h3 class="font-heading font-bold text-2xl">Double Bed Room</h3>
+            <span class="price-badge">₹2,500/night</span>
+          </div>
+          <p class="text-gray-500 text-sm mb-4">Ideal for couples and small families seeking a cozy, well-equipped stay.</p>
+          <ul class="grid grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+            <li>❄️ Air Conditioning</li>
+            <li>📺 Smart TV</li>
+            <li>📶 Free WiFi</li>
+            <li>🚿 Geyser</li>
+            <li>🛎️ 24-Hour Room Service</li>
+          </ul>
+          <div class="flex gap-3">
+            <a href="tel:+919425134968" class="btn-maroon ripple flex-1 text-center text-sm">Call to Book</a>
+            <a href="https://wa.me/919425134968?text=Hi%2C%20I%20want%20to%20book%20a%20Double%20Bed%20Room" target="_blank" class="btn-gold ripple flex-1 text-center text-sm">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <!-- Four Bed -->
+      <div class="room-card reveal">
+        <div class="room-img-wrap">
+          <img src="four-bed.jpg" alt="Four Bed Family Room" loading="lazy">
+        </div>
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-3">
+            <h3 class="font-heading font-bold text-2xl">Four Bed Family Room</h3>
+            <span class="price-badge">₹4,000/night</span>
+          </div>
+          <p class="text-gray-500 text-sm mb-4">Spacious room perfect for families and groups travelling together.</p>
+          <ul class="grid grid-cols-2 gap-3 text-sm text-gray-700 mb-6">
+            <li>❄️ Air Conditioning</li>
+            <li>📺 Smart TV</li>
+            <li>📶 Free WiFi</li>
+            <li>🚿 Geyser</li>
+            <li>🛎️ 24-Hour Room Service</li>
+          </ul>
+          <div class="flex gap-3">
+            <a href="tel:+919425134968" class="btn-maroon ripple flex-1 text-center text-sm">Call to Book</a>
+            <a href="https://wa.me/919425134968?text=Hi%2C%20I%20want%20to%20book%20a%20Four%20Bed%20Family%20Room" target="_blank" class="btn-gold ripple flex-1 text-center text-sm">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section id="amenities" class="py-24" style="background:var(--beige);">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center reveal mb-16">
+      <span class="section-tag">Hotel Amenities</span>
+      <h2 class="font-heading font-bold text-4xl mt-3">Everything You Need for a Pleasant Stay</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div class="amenity-card reveal"><div class="amenity-icon">📶</div><p class="mt-4 font-medium">Free WiFi</p></div>
+      <div class="amenity-card reveal"><div class="amenity-icon">🅿️</div><p class="mt-4 font-medium">Parking Facility</p></div>
+      <div class="amenity-card reveal"><div class="amenity-icon">☕</div><p class="mt-4 font-medium">Tea &amp; Refreshments</p></div>
+      <div class="amenity-card reveal"><div class="amenity-icon">🍽️</div><p class="mt-4 font-medium">Food Service</p></div>
+      <div class="amenity-card reveal"><div class="amenity-icon">🛎️</div><p class="mt-4 font-medium">24-Hour Room Service</p></div>
+      <div class="amenity-card reveal"><div class="amenity-icon">❄️</div><p class="mt-4 font-medium">AC Rooms</p></div>
+      <div class="amenity-card reveal"><div class="amenity-icon">📺</div><p class="mt-4 font-medium">Smart TV</p></div>
+      <div class="amenity-card reveal"><div class="amenity-icon">🚿</div><p class="mt-4 font-medium">Hot Water (Geyser)</p></div>
+      <div class="amenity-card reveal"><div class="amenity-icon">👨‍👩‍👧‍👦</div><p class="mt-4 font-medium">Family-Friendly</p></div>
+      <div class="amenity-card reveal"><div class="amenity-icon">🔒</div><p class="mt-4 font-medium">Safe &amp; Secure</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center reveal mb-14">
+      <span class="section-tag">Gallery</span>
+      <h2 class="font-heading font-bold text-4xl mt-3">A Glimpse Into Hotel Richa</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div class="gallery-grid reveal" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <div class="flex justify-between items-center w-full max-w-5xl px-6 mb-3">
+    <span class="text-white/70 text-sm">Hotel Richa Gallery</span>
+    <span class="lb-close text-3xl leading-none" onclick="closeLightbox()">&times;</span>
+  </div>
+  <img id="lightboxImg" src="" alt="Gallery preview">
+  <div class="flex gap-10 mt-5">
+    <span class="lb-nav text-2xl" onclick="changeSlide(-1)">&#8592;</span>
+    <span class="lb-nav text-2xl" onclick="changeSlide(1)">&#8594;</span>
+  </div>
+</div>
+
+<!-- NEARBY -->
+<section id="nearby" class="py-24" style="background:var(--beige);">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center reveal mb-16">
+      <span class="section-tag">Explore Ujjain</span>
+      <h2 class="font-heading font-bold text-4xl mt-3">Nearby Attractions</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="attraction-card reveal">
+        <img src="mahakaleshwar.jpg" class="w-full h-48 object-cover" loading="lazy" alt="Mahakaleshwar Jyotirlinga Temple">
+        <div class="p-5 flex justify-between items-center">
+          <h3 class="font-heading font-semibold text-lg">Mahakaleshwar Jyotirlinga Temple</h3>
+          <span class="distance-badge">~6 km</span>
+        </div>
+      </div>
+
+      <div class="attraction-card reveal">
+        <img src="harshiddi.jpg" class="w-full h-48 object-cover" loading="lazy" alt="Harsiddhi Temple">
+        <div class="p-5 flex justify-between items-center">
+          <h3 class="font-heading font-semibold text-lg">Harsiddhi Temple</h3>
+          <span class="distance-badge">~6.5 km</span>
+        </div>
+      </div>
+
+      <div class="attraction-card reveal">
+        <img src="raam-ghat.jpg" class="w-full h-48 object-cover" loading="lazy" alt="Ram Ghat">
+        <div class="p-5 flex justify-between items-center">
+          <h3 class="font-heading font-semibold text-lg">Ram Ghat</h3>
+          <span class="distance-badge">~6 km</span>
+        </div>
+      </div>
+
+      <div class="attraction-card reveal">
+        <img src="kaal%20bherav.jpg" class="w-full h-48 object-cover" loading="lazy" alt="Kal Bhairav Temple">
+        <div class="p-5 flex justify-between items-center">
+          <h3 class="font-heading font-semibold text-lg">Kal Bhairav Temple</h3>
+          <span class="distance-badge">~8 km</span>
+        </div>
+      </div>
+
+      <div class="attraction-card reveal">
+        <img src="ujjain-railway.jpg" class="w-full h-48 object-cover" loading="lazy" alt="Ujjain Railway Station">
+        <div class="p-5 flex justify-between items-center">
+          <h3 class="font-heading font-semibold text-lg">Ujjain Railway Station</h3>
+          <span class="distance-badge">~4 km</span>
+        </div>
+      </div>
+
+      <div class="attraction-card reveal">
+        <img src="dewas-bus-stand.jpg" class="w-full h-48 object-cover" loading="lazy" alt="Dewas Gate Bus Stand">
+        <div class="p-5 flex justify-between items-center">
+          <h3 class="font-heading font-semibold text-lg">Dewas Gate Bus Stand</h3>
+          <span class="distance-badge">~5 km</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="py-24 bg-white overflow-hidden">
+  <div class="max-w-4xl mx-auto px-5">
+    <div class="text-center reveal mb-14">
+      <span class="section-tag">Guest Reviews</span>
+      <h2 class="font-heading font-bold text-4xl mt-3">What Our Guests Say</h2>
+      <div class="divider-gold"></div>
+    </div>
+
+    <div class="relative reveal">
+      <div id="testimonialTrack"></div>
+      <div class="flex justify-center gap-2 mt-8" id="testimonialDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24" style="background:var(--beige);">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center reveal mb-16">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="font-heading font-bold text-4xl mt-3">Contact Hotel Richa</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-10">
+      <div class="reveal space-y-6">
+        <div class="bg-white rounded-2xl p-6 shadow-lg flex items-start gap-4">
+          <div class="text-2xl">📍</div>
+          <div>
+            <h4 class="font-semibold mb-1">Address</h4>
+            <p class="text-gray-600 text-sm">Mahesh Vihar, 03 Colony, Sanwer Road, Ujjain, Madhya Pradesh 456010, India</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg flex items-start gap-4">
+          <div class="text-2xl">📞</div>
+          <div>
+            <h4 class="font-semibold mb-1">Phone</h4>
+            <a href="tel:+919425134968" class="text-gray-600 text-sm hover:text-[#7A1F1F]">+91 9425134968</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg flex items-start gap-4">
+          <div class="text-2xl">🟢</div>
+          <div>
+            <h4 class="font-semibold mb-1">WhatsApp</h4>
+            <a href="https://wa.me/919425134968" target="_blank" class="text-gray-600 text-sm hover:text-[#7A1F1F]">+91 9425134968</a>
+          </div>
+        </div>
+        <form class="bg-white rounded-2xl p-6 shadow-lg space-y-4" onsubmit="return submitForm(event)">
+          <h4 class="font-semibold mb-2">Send an Inquiry</h4>
+          <input type="text" required placeholder="Your Name" class="w-full rounded-lg px-4 py-3 text-sm">
+          <input type="tel" required placeholder="Phone Number" class="w-full rounded-lg px-4 py-3 text-sm">
+          <textarea rows="3" placeholder="Message" class="w-full rounded-lg px-4 py-3 text-sm"></textarea>
+          <button type="submit" class="btn-maroon ripple w-full">Send via WhatsApp</button>
+        </form>
+      </div>
+      <div class="reveal rounded-2xl overflow-hidden shadow-lg h-[520px] lg:h-auto">
+        <iframe
+          src="https://www.google.com/maps?q=Hotel+Richa,+Mahesh+Vihar,+Sanwer+Road,+Ujjain,+Madhya+Pradesh+456010&output=embed"
+          width="100%" height="100%" style="border:0;min-height:500px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section id="book" class="py-24 relative" style="background:linear-gradient(135deg,var(--maroon),var(--maroon-dark));">
+  <div class="max-w-4xl mx-auto px-5 text-center relative z-10">
+    <span class="hero-tag reveal">Direct Booking = Best Price</span>
+    <h2 class="font-heading font-bold text-4xl md:text-5xl text-white mt-6 reveal">Ready to Book Your Stay?</h2>
+    <p class="text-white/80 mt-5 reveal">Skip the middleman. Call or WhatsApp us directly for the best rates and instant confirmation.</p>
+    <div class="flex flex-wrap gap-5 justify-center mt-9 reveal">
+      <a href="tel:+919425134968" class="btn-gold ripple text-lg px-10 py-4">📞 Call: +91 9425134968</a>
+      <a href="https://wa.me/919425134968?text=Hi%2C%20I%20want%20to%20book%20a%20room%20at%20Hotel%20Richa" target="_blank" class="btn-outline ripple text-lg px-10 py-4">🟢 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#1c0d0d] text-white/70 pt-16 pb-28 lg:pb-10">
+  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-4 gap-10">
+    <div>
+      <div class="logo-text text-white mb-4">Hotel <span class="accent">Richa</span></div>
+      <p class="text-sm leading-relaxed">A comfortable, family-friendly hotel offering warm hospitality in the heart of Ujjain.</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#about" class="hover:text-[var(--gold)]">About Us</a></li>
+        <li><a href="#rooms" class="hover:text-[var(--gold)]">Rooms</a></li>
+        <li><a href="#amenities" class="hover:text-[var(--gold)]">Amenities</a></li>
+        <li><a href="#gallery" class="hover:text-[var(--gold)]">Gallery</a></li>
+        <li><a href="#reviews" class="hover:text-[var(--gold)]">Reviews</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Contact</h4>
+      <p class="text-sm mb-2">Mahesh Vihar, 03 Colony, Sanwer Road, Ujjain, MP 456010</p>
+      <p class="text-sm mb-2">📞 <a href="tel:+919425134968" class="hover:text-[var(--gold)]">+91 9425134968</a></p>
+      <a href="https://wa.me/919425134968" target="_blank" class="inline-block mt-2 bg-[#25D366] text-white text-sm px-4 py-2 rounded-full">WhatsApp Us</a>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Find Us</h4>
+      <a href="https://www.google.com/maps?q=Hotel+Richa,+Sanwer+Road,+Ujjain" target="_blank" class="text-sm underline hover:text-[var(--gold)]">Open in Google Maps</a>
+      <div class="flex gap-4 mt-5">
+        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--gold)] hover:text-black transition">f</a>
+        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--gold)] hover:text-black transition">in</a>
+        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--gold)] hover:text-black transition">ig</a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-xs text-white/40 mt-14">© Hotel Richa, Ujjain. All Rights Reserved.</div>
+</footer>
+
+<!-- Sticky mobile book bar -->
+<div id="sticky-book">
+  <a href="tel:+919425134968" class="text-white text-sm font-medium flex-1 text-center border-r border-white/20 py-2">📞 Call</a>
+  <a href="https://wa.me/919425134968" target="_blank" class="text-white text-sm font-medium flex-1 text-center py-2">🟢 WhatsApp</a>
+  <a href="#book" class="btn-gold text-sm ml-2">Book</a>
+</div>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919425134968" target="_blank" id="whatsapp-float" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4c-4.32 0-7.85 3.5-7.85 7.85 0 1.38.36 2.7 1.05 3.88L4 20l4.4-1.15a7.86 7.86 0 0 0 3.65.9h0c4.32 0 7.85-3.5 7.85-7.85 0-2.1-.82-4.07-2.3-5.58zm-5.55 12.08h0a6.56 6.56 0 0 1-3.34-.92l-.24-.14-2.48.65.66-2.42-.16-.25a6.56 6.56 0 0 1-1-3.49c0-3.62 2.95-6.57 6.58-6.57 1.76 0 3.4.68 4.65 1.93a6.54 6.54 0 0 1 1.92 4.65c0 3.63-2.95 6.56-6.59 6.56zm3.6-4.92c-.2-.1-1.17-.58-1.35-.64-.18-.07-.32-.1-.45.1-.13.2-.51.64-.63.77-.12.13-.23.15-.43.05-.2-.1-.85-.31-1.62-1-.6-.53-1-1.19-1.12-1.39-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34h-.38c-.13 0-.34.05-.52.25-.18.2-.68.67-.68 1.63 0 .96.7 1.89.8 2.02.1.13 1.37 2.09 3.32 2.93.46.2.82.32 1.1.41.46.15.88.13 1.21.08.37-.06 1.17-.48 1.34-.94.16-.46.16-.86.11-.94-.05-.09-.18-.14-.38-.24z"/></svg>
+</a>
+
+</body>
+</html>
